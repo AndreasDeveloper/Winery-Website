@@ -1,0 +1,106 @@
+/* -------------------------- */
+/*        - INTRO -
+/* -------------------------- */
+
+// Main section wrapper
+.section-intro {
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    background-image: linear-gradient(rgba($color-white, .50), rgba($color-white, .80)) ,url(../img/bk-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+// Left side wrapper
+.left-side {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    // * --- MEDIA QUERIES --- * \\
+    @media only screen and (max-width: $bp-largest) {
+        top: 30%;
+        right: -10%;
+        margin-left: 5rem;
+    }
+    @media only screen and (max-width: $bp-medium) {    
+        top: 40%;
+        right: -10%;
+        margin-left: 15rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        top: 25%;
+        right: -80%;
+        left: -15%;
+    }
+    // Images
+    &__img-1 {
+        position: relative;
+        width: 100%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
+        box-shadow: 0 2rem 5rem rgba($color-black, .1);
+        z-index: 5;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) { grid-column: 1 / 5; grid-row: 1 / -1; }
+    }
+    &__img-2 {
+        position: relative;
+        width: 115%;
+        grid-row: 2 / 6;
+        grid-column: 3 / 6;
+        box-shadow: 0 2rem 5rem rgba($color-black, .2);
+        z-index: 5;
+        // * --- MEDIA QUERIES --- * \\
+        @media only screen and (max-width: $bp-medium) { grid-row: 1 / -1; width: 100%; }
+    }
+}
+
+// Right side wrapper
+.right-side {
+    width: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    top: 30%;
+    // * --- MEDIA QUERIES --- *  \\
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 40%;
+        left: 2%;
+        width: 100%;
+    }
+    // Text 1
+    &__text-1 {
+        font-family: 'bebasneue', 'Halvetica';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.6rem;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        color: $color-primary;
+        padding-bottom: 1.2rem;
+    }
+    // Heading
+    &__heading {
+        color: $color-font;
+        font-size: 2.8rem;
+        font-weight: 400;
+        padding-bottom: 1rem;
+        @include underline;
+    }
+    // Text 2 
+    &__text-2 {
+        color: $color-gray-dark-6;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 3rem;
+        width: 60%;
+    }
+}
