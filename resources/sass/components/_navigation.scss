@@ -2,23 +2,18 @@
 /*       - NAVIGATION -
 /* -------------------------- */
 
-// States for Navigation
-.navigation {
-    position: relative;
-    z-index: 20;
-	-o-transition-duration: 0.3s;
-	-moz-transition-duration: 0.3s;
-	-webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-}
-
 // Navigation wrapper
 .navigation {
     height: 5rem;
-	position: fixed;
+    position: fixed;
 	width: 100%;
 	background: transparent;
     z-index: 5;
+    // Transitions
+    -o-transition-duration: 0.3s;
+	-moz-transition-duration: 0.3s;
+	-webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 .menuSix > * { display: none; }
 

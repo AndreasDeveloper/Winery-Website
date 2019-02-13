@@ -4,13 +4,17 @@
 
 // Main section wrapper
 .section-intro {
+    display: flex;
     width: 100%;
-    min-height: 50vh;
+    min-height: 60vh;
     position: relative;
     background-image: linear-gradient(rgba($color-white, .50), rgba($color-white, .80)) ,url(../img/bk-1.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    @media only screen and (max-width: $bp-small) {
+        min-height: 110vh;
+    }
 }
 
 // Left side wrapper
