@@ -1,0 +1,26 @@
+/* -------------------------- */
+/*        - HEADER -
+/* -------------------------- */
+
+.header {
+    height: 95vh;
+    width: 100%;
+    background-image: linear-gradient(rgba($color-black, .20), rgba($color-black, .20)), url(../img/header-2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // Heading
+    &__heading {
+        font-size: 6rem;
+        font-weight: 400;
+        color: $color-gray-3;
+        text-align: center;
+    }
+}
+
+.an {
+    height: 200vh;
+}
