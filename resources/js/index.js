@@ -1,7 +1,7 @@
 // * -- IMPORTING WEBPACK MANDATORY FILES -- * \\
 import '../sass/main.scss';
 
-// - STICKY NAVIGATION - \\
+// ** --- STICKY NAVIGATION --- ** \\
 (() => {
     // DOM Elements
     const nav = document.querySelector('.navigation');
@@ -28,7 +28,7 @@ import '../sass/main.scss';
     navBtn.addEventListener('click', addClassFunSix);
 })();
 
-// - IMAGE OBSERVING | OPTIMIZATION - \\
+// ** --- IMAGE OBSERVING | OPTIMIZATION --- * \\
 (() => {
     // DOM Element
     const images = document.querySelectorAll('img');

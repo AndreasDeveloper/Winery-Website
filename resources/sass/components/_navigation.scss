@@ -25,10 +25,11 @@
     margin: 0 auto;
     // Logo
     &__logo {
+        /*
         display: flex;
         align-items: center;
-        position: relative;
-        color: $color-white; // Temp
+        position: relative; 
+        color: $color-white; // Temp */
         cursor: pointer;
     }
 }
@@ -39,20 +40,21 @@
     display: flex;
     align-items: center;
     margin: 4% 0;
-    width: 30%;
+    width: auto;
+    @media only screen and (max-width: $bp-medium) { margin: 0; }
 }
 // Navigation li
 .nav-list {
     float: left;
     font-size: 1.2rem;
     font-weight: 400;
-    padding: 0 5%;
     // Anchor tags
     &__anchor {
         color: #d3cec3;
         text-decoration: none;
         letter-spacing: .5rem;
         cursor: pointer;
+        padding: 0 3rem;
     }
 }
 

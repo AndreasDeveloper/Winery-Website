@@ -6,7 +6,131 @@
 .section-aboutw {
     position: relative;
     min-height: 95vh;
+    width: 100%;
     background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../img/winery-1.jpeg);
     background-position: center;
     background-size: cover;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-desktop) { min-height: 115vh; }
+    @media only screen and (max-width: $bp-largest-5) { min-height: 60vh; }
+}
+
+// Left side text wrapper
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    min-height: 100vh;
+    padding-top: 15%;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-largest-5) { min-height: 60vh; }
+    @media only screen and (max-width: $bp-small) { min-height: 130vh; width: 100%; }
+
+    // Small text 1
+    &__text-1 {
+        color: $color-primary-light;
+        font-family: 'bebasneue', 'Halvetica';
+        font-weight: 400;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        padding-bottom: 2rem;
+    }   
+    // Main heading 1
+    &__heading {
+        color: $color-font-2;
+        font-size: 4.6rem;
+        font-weight: 400;
+        padding-bottom: 2rem;
+    }
+    // Paragraph text 2
+    &__text-2 {
+        color: $color-gray-dark-6;
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: center;
+        line-height: 2.8rem;
+        width: 50%;
+        padding-bottom: 3rem;
+    }
+    // Heading 2
+    &__heading-2 {
+        color: $color-font-2;
+        font-size: 1.8rem;
+        font-weight: 300;
+        letter-spacing: .15rem;
+    }
+    &__wine-blocks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        padding-top: 2rem;
+    }
+    // -- Wine fact block 1 --
+    &__fact-block-1, &__fact-block-2 {
+        color: $color-gray-dark-6;
+        width: 30%;
+        // * -- MEDIA QUERIES -- * \\
+        @media only screen and (max-width: $bp-desktop) { width: 40%; }
+        @media only screen and (max-width: $bp-medium) { width: 50%; }
+        @media only screen and (max-width: $bp-vsmall-4) { width: 60%; }
+        // h3 elements
+        > h3 {
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-bottom: .8rem;
+            @media only screen and (max-width: $bp-vsmall-4) { font-size: 1.3rem; }
+        }
+        // Icons
+        > h3 i { color: $color-primary; padding-right: 1rem; }
+    }
+}
+
+// Right side image wrapper
+.about-images {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    width: 50%;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-medium) { top: 10%; }
+    @media only screen and (max-width: $bp-small) { width: 100%; top: 50%; right: 3%; }
+    @media only screen and (max-width: $bp-vsmall-4) { top: 60%; }
+    // Images common properties
+    &__img-1,
+    &__img-2,
+    &__img-3 {
+        position: relative; 
+        border: .1rem solid $color-primary;
+        box-shadow: 0 2rem 5rem rgba($color-black, .2);
+        z-index: 5;
+        transition: .1s ease-in-out;
+        &:hover { transform: scale(1.05); }
+    }
+    // Image 1
+    &__img-1 {
+        width: 100%;
+        grid-row: 2 / 12;
+        grid-column: 2 / 10;
+    }
+    // Image 2
+    &__img-2 {
+        width: 115%;
+        grid-row: 5 / 9;
+        grid-column: 6 / 12;
+    }
+    // Image 3
+    &__img-3 {
+        width: 115%;
+        grid-row: 7 / 11;
+        grid-column: 3 / 9;
+    }
 }
