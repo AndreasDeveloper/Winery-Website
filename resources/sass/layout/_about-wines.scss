@@ -5,7 +5,7 @@
 // Main about wines section wrapper
 .section-aboutw {
     position: relative;
-    min-height: 95vh;
+    min-height: 110vh;
     width: 100%;
     background-image: linear-gradient(rgba($color-black, .80), rgba($color-black, .80)), url(../img/winery-1.jpeg);
     background-position: center;
@@ -101,6 +101,7 @@
     align-items: center;
     width: 50%;
     // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-desktop) { top: 12.5%; }
     @media only screen and (max-width: $bp-medium) { top: 10%; }
     @media only screen and (max-width: $bp-small) { width: 100%; top: 50%; right: 3%; }
     @media only screen and (max-width: $bp-vsmall-4) { top: 60%; }
@@ -109,7 +110,7 @@
     &__img-2,
     &__img-3 {
         position: relative; 
-        border: .1rem solid $color-primary;
+        //border: .1rem solid $color-primary;
         box-shadow: 0 2rem 5rem rgba($color-black, .2);
         z-index: 5;
         transition: .1s ease-in-out;

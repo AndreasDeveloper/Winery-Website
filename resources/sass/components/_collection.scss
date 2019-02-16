@@ -1,0 +1,79 @@
+/* -------------------------- */
+/*     - WINE COLLECTION -
+/* -------------------------- */
+
+// Main section wrapper
+.section-collection {
+    min-height: 110vh;
+    position: relative;
+    background-color: $color-gray-1;
+    background-image: linear-gradient(rgba($color-white, .90), rgba($color-white, .80)) ,url(../img/bk-4.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 105%;
+    padding-top: 0.5rem;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-largest-5) { min-height: 70vh; background-size: 50%; background-position: 120%; }
+    @media only screen and (max-width: $bp-small) { background-position: 50% 10%; }
+    // Text Wrapper
+    &__text-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15rem;
+        @include underline;
+        // Heading 1
+        &__heading-1 {
+            color: $color-primary-light;
+            font-family: 'bebasneue', 'Halvetica';
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            padding-bottom: 2rem;
+        }
+        // Heading 2
+        &__heading-2 {
+            color: $color-font;
+            font-size: 3.6rem;
+            font-weight: 400;
+            padding-bottom: 1rem;
+        }
+    }
+    // Images wrapper
+    &__image-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10rem;
+        // * -- MEDIA QUERIES -- * \\
+        @media only screen and (max-width: $bp-small) { flex-direction: column; align-items: center; }
+        // Every single image inside of the block class
+        &__block > img {
+            height: 40rem;
+            padding: 0 5rem;
+            // * -- MEDIA QUERIES -- * \\
+            @media only screen and (max-width: $bp-medium) { height: 30rem; }
+            @media only screen and (max-width: $bp-small) { margin: 4rem 0; }
+        }
+        &__block > h3, p {
+            text-align: center;
+        }
+        &__block > h3 {
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+            color: $color-primary-dark;
+            font-weight: 400;
+            font-size: 1.8rem;
+            @media only screen and (max-width: $bp-small) { padding: 0; }
+        }
+        &__block > p {
+            color: $color-font-3;
+            font-size: 1.4rem;
+        }
+        // Block 2
+        > .block-2 {
+            transform: scale(1.1);
+        }
+    }
+}
