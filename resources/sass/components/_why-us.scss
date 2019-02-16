@@ -1,0 +1,74 @@
+/* -------------------------- */
+/*        - WHY US -
+/* -------------------------- */
+
+// Main section wrapper
+.why-us {
+    min-height: 50vh;
+    margin: 10rem 25rem 5rem 25rem;
+    @media only screen and (max-width: $bp-small) { margin: 10rem 0 5rem 0; }
+    // Intro heading wrapper
+    &__text-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // Heading
+        &__heading {
+            color: $color-font;
+            font-size: 3.6rem;
+            font-weight: 400;
+            padding-bottom: 1rem;
+            @include underline;
+        }
+    }
+}
+
+// Blocks
+.why-us-blocks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10rem;
+    @media only screen and (max-width: $bp-small) { flex-direction: column; align-items: center; }
+    // -- BLOCKS SETUP -- \\
+    &__block-1,
+    &__block-2,
+    &__block-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 5rem;
+        @media only screen and (max-width: $bp-small) { padding: 0; }
+    }
+    // -- IMAGE SETUP -- \\
+    &__image-wrap {
+        width: 15rem;
+        height: 15rem;
+        margin-bottom: 3rem;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: 50%;
+        position: relative;
+        overflow: hidden;  
+    }
+    &__image {
+        height: 100%;
+        transform: scale(1.05);
+        backface-visibility: hidden;
+        transition: all .5s;
+    }
+    // -- TEXT SETUP -- \\
+    &__heading {
+        font-size: 2rem;
+        font-weight: 400;
+        color: $color-primary-dark;
+        padding-bottom: 1rem;
+    }
+    &__text {
+        color: $color-font-4;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+        @media only screen and (max-width: $bp-small) { padding: 0 5rem 10rem 5rem; }
+    }
+}
