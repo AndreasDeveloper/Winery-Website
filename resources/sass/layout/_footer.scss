@@ -1,0 +1,56 @@
+/* -------------------------- */
+/*        - FOOTER -
+/* -------------------------- */
+
+.footer {
+    position: relative;
+    min-height: 30vh;
+    background-color: $color-gray-dark-9;
+    color: $color-gray-dark-6;
+    overflow: hidden;
+    @media only screen and (max-width: $bp-largest-5) { min-height: 20vh; }
+    // Content 
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // * -- MEDIA QUERIE -- * \\
+        @media only screen and (max-width: $bp-small) { flex-direction: column; }
+        // For each side, add 5% padding
+        > * {
+            padding: 5% 3%;
+            @media only screen and (max-width: $bp-largest-5) { padding: 10% 2%; }
+        }
+    }
+}
+
+// Footer left side content
+.footer-left {
+    display: flex;
+    > .legal {
+        padding: 0 .6rem;
+        color: $color-gray-4;
+        font-size: 1.4rem;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+
+// Footer center content
+.footer-center { 
+    font-size: 5rem; 
+    @media only screen and (max-width: $bp-largest-5) { font-size: 4rem; }
+}
+
+// Footer right side content 
+.footer-right {
+    @media only screen and (max-width: $bp-small) { text-align: center; }
+    > .copyright { 
+        font-weight: 400; 
+        font-size: 1.4rem;
+        > .span-el {
+            color: $color-gray-4;
+        }
+    }
+}

@@ -7,6 +7,8 @@
     background-image: linear-gradient(rgba($color-black, .20), rgba($color-black, .20)), url(../img/form.jpg);
     background-position: center;
     background-size: cover;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-desktop) { min-height: 120vh; }
     @media only screen and (max-width: $bp-largest-5) { min-height: 65vh; }
     // Intro heading wrapper
     &__heading-wrap {
@@ -29,9 +31,12 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin: 5rem 25rem;
-    @media only screen and (max-width: $bp-largest-5) { margin: 5rem; }
-    @media only screen and (max-width: $bp-small) { margin: 5rem 0; flex-direction: column; }
+    margin: 0 25rem;
+    padding-top: 5rem;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-desktop) { margin: 0 15rem; }
+    @media only screen and (max-width: $bp-largest-5) { margin: 0 5rem; }
+    @media only screen and (max-width: $bp-small) { margin: 0; flex-direction: column; }
 }
 
 // * ---- Contact Form ---- * \\
