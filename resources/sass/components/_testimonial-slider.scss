@@ -2,30 +2,46 @@
 /*   - TESTIMONIAL SLIDER -
 /* -------------------------- */
 
+// Testimonials wrapper
 .testimonials {
     position: relative;
     min-height: 40vh;
     margin-top: 15rem;
+    @media only screen and (max-width: $bp-small) { margin-top: 5rem; }
 }
 
+// Testimonial block
 .test {
     display: flex;
     flex-direction: column;
     align-items: center;
     // Text
     &__text {
+        box-shadow: 1rem 1rem 5rem rgba($color-black, .10);
+        color: $color-font-4;
+        font-size: 1.6rem;
+        font-weight: 400;
         text-align: center;
+        line-height: 3rem;
+        width: 80%;
+        padding-bottom: 5rem;
+        padding: 5rem;
+        @media only screen and (max-width: $bp-vsmall-3b) { width: 100%; }
     }
     // Image wrapper
     &__image-wrap {
         width: 10rem;
         height: 10rem;
+        margin-top: -5vh;
         margin-bottom: 3rem;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border-radius: 50%;
         position: relative;
         overflow: hidden;  
+        display: flex;
+        justify-content: center;
+        @media only screen and (max-width: $bp-largest-5) { margin-top: -2vh; }
         > img {
             height: 100%;
             transform: scale(1.05);
@@ -33,4 +49,35 @@
             transition: all .5s;
         }
     }
+    // Name text
+    &__name {
+        color: $color-primary-dark;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    // Role
+    &__role {
+        color: $color-font-4;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
+
+// - ICONS - \\
+.icon-1, .icon-2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    @media only screen and (max-width: $bp-small) { top: 30%; }
+}
+.icon-1 {
+    align-items: flex-start;
+    left: 3%;
+}
+.icon-2 {
+    align-items: flex-end;
+    left: 97%;
 }

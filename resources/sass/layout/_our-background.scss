@@ -11,6 +11,8 @@
     background-size: 35%;
     background-repeat: no-repeat;
     background-color: $color-white;
+    @media only screen and (max-width: $bp-largest-5) { padding: 10rem 5rem 5rem 5rem; background-size: 50%; min-height: 30vh; }
+    @media only screen and (max-width: $bp-small) { background-size: 65%; background-position: 50% 1%; }
     // Heading wrapper
     &__text-wrap {
         display: flex;
@@ -30,12 +32,17 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            text-align: center;
+        }
     }
 }
 
 // Block 1 wrapper
 .text-block {
     padding: 0 3rem;
+    @media only screen and (max-width: $bp-small) { padding: 3rem; }
     // Text
     &__content {
         color: $color-font-4;
