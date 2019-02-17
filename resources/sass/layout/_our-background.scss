@@ -1,0 +1,46 @@
+/* -------------------------- */
+/*     - OUR BACKGROUND -
+/* -------------------------- */
+
+.section-background {
+    position: relative;
+    min-height: 130vh;
+    padding: 25rem 30rem;
+    background-image: linear-gradient(rgba($color-white, .80), rgba($color-white, .80)) ,url(../img/bk-2.jpg);
+    background-position: 50% 5%;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-color: $color-white;
+    // Heading wrapper
+    &__text-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // Heading
+        &__heading {
+            color: $color-font;
+            font-size: 3.5rem;
+            font-weight: 400;
+            padding-bottom: 8rem;
+            @include underline;
+        }
+    }
+    // Text wrapper
+    &__text-block-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+// Block 1 wrapper
+.text-block {
+    padding: 0 3rem;
+    // Text
+    &__content {
+        color: $color-font-4;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 3rem;
+    }
+}

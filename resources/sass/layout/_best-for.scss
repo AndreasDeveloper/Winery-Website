@@ -1,0 +1,23 @@
+/* -------------------------- */
+/*        - BEST FOR -
+/* -------------------------- */
+
+.section-best-for {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background-image: linear-gradient(rgba($color-black, .75), rgba($color-black, .75)) ,url(../img/header-1.jpeg);
+    background-position: center;
+    background-size: cover;
+
+    // Heading
+    &__heading {
+        color: $color-font-2;
+        font-size: 5rem;
+        font-weight: 400;
+        text-align: center;
+        @include underline-3;
+    }
+}
