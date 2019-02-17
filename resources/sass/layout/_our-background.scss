@@ -11,6 +11,8 @@
     background-size: 35%;
     background-repeat: no-repeat;
     background-color: $color-white;
+    // * -- MEDIA QUERIES -- * \\
+    @media only screen and (max-width: $bp-desktop) { padding: 15rem 10rem 5rem 10rem; }
     @media only screen and (max-width: $bp-largest-5) { padding: 10rem 5rem 5rem 5rem; background-size: 50%; min-height: 30vh; }
     @media only screen and (max-width: $bp-small) { background-size: 65%; background-position: 50% 1%; }
     // Heading wrapper

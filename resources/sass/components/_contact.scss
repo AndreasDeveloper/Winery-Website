@@ -1,0 +1,136 @@
+/* -------------------------- */
+/*        - CONTACT -
+/* -------------------------- */
+
+.contact {
+    min-height: 110vh;
+    background-image: linear-gradient(rgba($color-black, .20), rgba($color-black, .20)), url(../img/form.jpg);
+    background-position: center;
+    background-size: cover;
+    @media only screen and (max-width: $bp-largest-5) { min-height: 65vh; }
+    // Intro heading wrapper
+    &__heading-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // Heading
+        &__heading {
+            color: $color-font-2;
+            font-size: 4rem;
+            font-weight: 400;
+            padding-top: 8rem;
+            @include underline;
+        }
+    }
+}
+
+// Content wrapper
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 5rem 25rem;
+    @media only screen and (max-width: $bp-largest-5) { margin: 5rem; }
+    @media only screen and (max-width: $bp-small) { margin: 5rem 0; flex-direction: column; }
+}
+
+// * ---- Contact Form ---- * \\
+// Contact form box
+.contact-box {
+    padding: 0 10rem;
+    // Form wrapper
+    &__form:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+// Input field
+.input-field {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: $color-font-2;
+    padding: 1.5rem 2rem;
+    border-radius: .1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: .07rem solid $color-font-2;
+    width: 110%;
+    display: block;
+    transition: all .1s;
+    &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        border-bottom: 3px solid $color-primary;
+    }
+    &:focus:invalid {
+        border-bottom: 3px solid $color-red;
+    }
+    &::placeholder {
+        color: $color-white;
+        font-weight: 400;
+        letter-spacing: .15rem;
+    }
+}
+.input-field:placeholder-shown + .label-field  {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+// Label field
+.label-field {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+    color: rgba($color-font-2, .50); 
+}
+
+// * ---- Contact Info ---- * \\
+
+// Contact info wrapper
+.contact-info {
+    padding-top: 4rem;
+    @media only screen and (max-width: $bp-small) { text-align: center; padding: 6rem 3rem 0 3rem; }
+    // Heading 
+    &__heading {
+        color: $color-primary;
+        font-size: 2rem;
+        font-weight: 400;
+        padding-bottom: 2rem;
+    }
+    // Text
+    &__text {
+        color: $color-font-5;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        padding-bottom: 4rem;
+    }
+}
+// Additional Info wrapper
+.contact-additional {
+    display: flex;
+    flex-direction: row;
+    color: $color-font-2;
+    @media only screen and (max-width: $bp-small) { justify-content: center; padding-bottom: 4rem; }
+    // Left side
+    &__left {
+        padding-right: 5rem;
+        @media only screen and (max-width: $bp-vsmall-4) { padding-right: 2rem; }
+        // Address
+        &__address {
+            font-size: 1.4rem;
+            font-weight: 400;
+            padding: .3rem 0;
+        }
+    }
+    // Right side
+    &__right {
+        // Email & Phone number info
+        &__other {
+            font-size: 1.4rem;
+            font-weight: 400;
+            padding: .3rem 0;
+        }
+    }
+}

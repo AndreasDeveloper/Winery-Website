@@ -1,0 +1,21 @@
+/* -------------------------- */
+/*        - BUTTONS -
+/* -------------------------- */
+
+// -- Button Full -- \\
+
+.btn-full {
+    display: inline;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: $color-white;
+    padding: 1.2rem;
+    border: .2rem solid $color-primary;
+    background-color: $color-primary;
+    transition: all .2s ease-in-out;
+    // On Hover
+    &:hover {
+        background-color: $color-primary-light;
+    }
+}
